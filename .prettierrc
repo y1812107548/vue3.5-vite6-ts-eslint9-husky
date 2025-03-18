@@ -3,20 +3,11 @@
   "singleQuote": true,
   "printWidth": 100,
   "trailingComma": "all",
-  "arrowParens": "avoid",
+  "arrowParens": "always",
   "endOfLine": "lf",
   "tabWidth": 2,
   "useTabs": false,
-  "vueIndentScriptAndStyle": true,
   "quoteProps": "as-needed",
   "bracketSpacing": true,
-  "bracketSameLine": false,
-  "jsxSingleQuote": false,
-  "insertPragma": false,
-  "requirePragma": false,
-  "proseWrap": "never",
-  "htmlWhitespaceSensitivity": "strict",
-  "rangeStart": 0,
-  "embeddedLanguageFormatting": "auto",
-  "singleAttributePerLine": false
+  "proseWrap": "never"
 }

@@ -19,53 +19,52 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { userApi } from '@/api'
+  import { onMounted, ref } from 'vue';
+  import { getUserList } from '@/api/user';
 
-const tableData = ref<any[]>([])
+  const tableData = ref<any[]>([]);
 
-// 组件逻辑
-onMounted(async () => {
-  const res = await userApi.getUserInfo()
-  console.log(res)
-  tableData.value = res
-})
+  // 组件逻辑
+  onMounted(async () => {
+    const res = await getUserList();
+    tableData.value = res;
+  });
 </script>
 
 <style lang="scss" scoped>
-.example-component {
-  padding: $spacing-base;
+  .example-component {
+    padding: $spacing-base;
 
-  .title {
-    color: $primary-color;
-    margin-bottom: $spacing-large;
-  }
+    .title {
+      color: $primary-color;
+      margin-bottom: $spacing-large;
+    }
 
-  .content {
-    @include flex(column, center, stretch);
-    gap: $spacing-base;
+    .content {
+      @include flex(column, center, stretch);
+      gap: $spacing-base;
 
-    .card {
-      background-color: white;
-      border: 1px solid $border-color;
-      border-radius: 8px;
-      padding: $spacing-base;
+      .card {
+        background-color: white;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        padding: $spacing-base;
 
-      @include respond-to('md') {
-        max-width: 600px;
-        margin: 0 auto;
-      }
+        @include respond-to('md') {
+          max-width: 600px;
+          margin: 0 auto;
+        }
 
-      .card-title {
-        color: $text-primary;
-        margin-bottom: $spacing-small;
-      }
+        .card-title {
+          color: $text-primary;
+          margin-bottom: $spacing-small;
+        }
 
-      .card-text {
-        color: $text-regular;
-        @include text-ellipsis(2);
+        .card-text {
+          color: $text-regular;
+          @include text-ellipsis(2);
+        }
       }
     }
   }
-}
 </style>

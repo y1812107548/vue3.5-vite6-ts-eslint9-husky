@@ -9,7 +9,12 @@ export default [
     files: ['**/*.{js,mjs,cjs,ts,vue}'],
   },
   {
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,

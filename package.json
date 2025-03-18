@@ -55,7 +55,7 @@
     "vue-tsc": "^2.2.4"
   },
   "engines": {
-    "node": ">=18.17.1"
+    "node": ">=21.1.0"
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx,vue}": [
